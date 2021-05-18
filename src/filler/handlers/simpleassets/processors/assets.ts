@@ -28,7 +28,7 @@ export function assetProcessor(core: SimpleAssetsHandler, processor: DataProcess
         async (db: ContractDBTransaction, block: ShipBlock, tx: EosioTransaction, trace: EosioActionTrace<CreateLogActionData>): Promise<void> => {
             tableInserts.assets.push({
                 contract: contract,
-                asset_id: trace.act.data.asseetid,
+                asset_id: trace.act.data.assetid,
                 author: trace.act.data.author,
                 category: trace.act.data.category,
                 owner: trace.act.data.owner,
