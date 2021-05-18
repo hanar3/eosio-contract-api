@@ -154,7 +154,7 @@ export function assetProcessor(core: SimpleAssetsHandler, processor: DataProcess
                 updated_at_block: block.block_num,
                 updated_at_time: eosioTimestampToDate(block.timestamp).getTime(),
             }, {
-                str: 'contract = $1 AND asset_id = ANY ($2) AND owner = $3',
+                str: 'contract = $1 AND asset_id = ANY ($2)',
                 values: [contract, trace.act.data.assetids]
             }, ['contract', 'asset_id']);
 
